@@ -1,0 +1,17 @@
+---
+# grafana-pv.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: grafana-pv
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/mnt/data/grafana"
+  claimRef:
+    name: grafana-pvc
+    namespace: monitoring

@@ -1,0 +1,42 @@
+{
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"name\":\"grafana-pvc\",\"namespace\":\"monitoring\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"2Gi\"}}}}\n",
+            "pv.kubernetes.io/bind-completed": "yes",
+            "pv.kubernetes.io/bound-by-controller": "yes"
+        },
+        "creationTimestamp": "2025-06-05T02:35:42Z",
+        "deletionGracePeriodSeconds": 0,
+        "deletionTimestamp": "2025-06-09T01:21:50Z",
+        "finalizers": [
+           
+        ],
+        "name": "grafana-pvc",
+        "namespace": "monitoring",
+        "resourceVersion": "67290",
+        "uid": "6f07539b-8757-4cea-8f77-702f5b942eec"
+    },
+    "spec": {
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "resources": {
+            "requests": {
+                "storage": "2Gi"
+            }
+        },
+        "volumeMode": "Filesystem",
+        "volumeName": "grafana-pv"
+    },
+    "status": {
+        "accessModes": [
+            "ReadWriteOnce"
+        ],
+        "capacity": {
+            "storage": "2Gi"
+        },
+        "phase": "Bound"
+    }
+}
